@@ -58,7 +58,7 @@ if col2.button("Search & Summarize"):
                         data = loader.load()
 
                         # Initialize the ChatOpenAI module, load and run the summarize chain
-                        llm = ChatOpenAI(temperature=0, model='gpt-3.5-turbo', openai_api_key=openai_api_key)
+                        llm = ChatOpenAI(temperature=0, model='gpt-4-1106-preview', openai_api_key=openai_api_key)
                         chain = load_summarize_chain(llm, chain_type="map_reduce")
                         summary = chain.run(data)
 
